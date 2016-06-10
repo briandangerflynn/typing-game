@@ -5,6 +5,10 @@
     <p id="about-text">Race to see how fast you can type code. When your done, your code will render and create a customized profile page.</p>
   </div>
   <br>
-  <a href="/users/new"><button id="get-started" type="">Get started!</button></a>
+  <% if current_user %>
+    <a href="/users/<%=current_user.id%>"><button id="get-started" type="">Get Started!</button></a>
+  <% else %>
+    <a href="/users/new"><button id="get-started" type="">Get Started!</button></a>
+  <% end %>
 
 </div>

@@ -94,13 +94,13 @@ body {
 }
 
 .code-challenge-area {
-  width: 49%;
+  width: 60%;
   float: left;
   padding-top: 100px;
 }
 
 .code-render-area {
-  width: 49%;
+  width: 40%;
   float: right;
   padding-top: 100px;
 }

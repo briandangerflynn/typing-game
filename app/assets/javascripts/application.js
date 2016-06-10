@@ -34,9 +34,11 @@ var view_row = level_one_line_views.split("|")
 var viewRowNumber = 0
 
 // manages the three lines of the line viewer
-$("#main-line").append(view_row[viewRowNumber]).css('font-size', '20px');
-$("#second-line").append(view_row[viewRowNumber + 1]).css('color', 'grey');
-$("#third-line").append(view_row[viewRowNumber + 2]).css('color', 'lightgrey')
+if (viewRowNumber>2) {
+  $("#main-line").append(view_row[viewRowNumber]).css('font-size', '20px');
+  $("#second-line").append(view_row[viewRowNumber + 1]).css('color', 'grey');
+  $("#third-line").append(view_row[viewRowNumber + 2]).css('color', 'lightgrey')
+}
 
 // mini library of character key codes
 charCodes = {
@@ -125,11 +127,44 @@ $("#challenge-box").on( "keyup", function( event ) {
       console.log('fail')
       $("#challenge-box").val(current)
       mistakes ++
+      $("#errors").text('')
+      $("#errors").append(mistakes)
     }
   }
 })
 
+$("#challenge-box").on('click', function(event) {
 
+  $("#challenge-box").attr('placeholder', '');
+  /* Act on the event */
+  $("#main-line").append(view_row[0]).css('font-size', '20px');
+  $("#second-line").append(view_row[1]).css('color', 'grey');
+  $("#third-line").append(view_row[2]).css('color', 'lightgrey')
+  var minutesLabel = document.getElementById("minutes");
+  var secondsLabel = document.getElementById("seconds");
+  var totalSeconds = 0;
+  setInterval(setTime, 1000);
+
+  function setTime()
+  {
+      ++totalSeconds;
+      secondsLabel.innerHTML = pad(totalSeconds%60);
+      minutesLabel.innerHTML = pad(parseInt(totalSeconds/60));
+  }
+
+  function pad(val)
+  {
+      var valString = val + "";
+      if(valString.length < 2)
+      {
+          return "0" + valString;
+      }
+      else
+      {
+          return valString;
+      }
+  }
+});
 
 
 
