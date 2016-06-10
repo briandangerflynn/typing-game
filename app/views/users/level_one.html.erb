@@ -1,0 +1,23 @@
+<div id="win-alert">
+  <p id="win-alert-text"></p>
+  <a href="/users/<%= current_user.id %>"><button>Yaaaaaay!</button></a>
+</div>
+
+<div class="container">
+  <div class="code-challenge-area">
+    <p>Type the following code:</p>
+    <div id="lines">
+      <code id="main-line"></code><br>
+      <code id="second-line"></code><br>
+      <code id="third-line"></code><br>
+    </div>
+      <br><br>
+    <form>
+      <input id="challenge-box" rows="5" cols="80" style="height:100px;width:400px;" autofocus="autofocus">
+      </input>
+    </form>
+  </div>
+  <div class="code-render-area">
+    <code class="rendered-code"></code>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="container">
+  <div id="profile-pic-div">
+    <img src="<%= @user.image %>" alt="profile picture" id="profile-pic">
+  </div>
+
+  <div id="profile-personal">
+    <h2><%= @user.name.capitalize %>'s Page</h2>
+
+    <% if current_user == @user %>
+      <a href="<%= @user.id %>/edit" id="edit-profile"><span>~Edit Profile~</span></a>
+    <% end %>
+
+    <p><%= @user.description %></p>
+
+    <hr>
+    <h3>Course Progress:</h3>
+    <p><a href="/level_one">Level One</a></p>
+    <ul>
+      <li>Speed: </li>
+      <li>Errors: </li>
+      <li><a href="#">See Level One Code</a></li>
+    </ul>
+    <p><a href="/level_two">Level Two</a></p>
+    <ul>
+      <li>Speed: </li>
+      <li>Errors: </li>
+      <li><a href="#">See Level Two Code</a></li>
+    </ul>
+
+  </div>
+</div>
+
+
+
+

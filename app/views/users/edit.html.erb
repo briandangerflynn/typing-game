@@ -1,0 +1,44 @@
+<div class="container">
+    <h3>Edit Your Profile</h3>
+<!-- new user form -->
+    <%= form_for @user, url: {action: 'update'} do |f| %>
+<!-- name -->
+        <div class="input-field">
+            <%= f.label :name %>
+            <%= f.text_field :name, :autofocus => 'autofocus', :value => @user.name %>
+            <br /><br />
+        </div>
+<!-- email -->
+        <div class="input-field">
+            <%= f.label :email %>
+            <%= f.text_field :email, :value => @user.email %>
+            <br /><br />
+        </div>
+<!-- password -->
+        <div class="input-field">
+            <%= f.label :password %>
+            <%= f.password_field :password, :value => @user.password %>
+            <br /><br />
+        </div>
+<!-- image -->
+        <div class="input-field">
+            <%= f.label :image %>
+            <%= f.text_field :image, :value => @user.image %>
+            <br /><br />
+        </div>
+<!-- description -->
+        <div class="input-field">
+            <%= f.label :description %>
+            <%= f.text_field :description, :value => @user.description %>
+            <br /><br />
+        </div>
+<!-- submit -->
+        <div class="input-field">
+            <%= f.submit "Submit Edits", :class =>'submit-edits'%>
+        </div>
+    <% end %>
+
+    <p><%= link_to 'cancel', @user %></p>
+        <br>
+
+</div>

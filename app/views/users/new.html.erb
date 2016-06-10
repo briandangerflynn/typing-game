@@ -1,0 +1,47 @@
+<div class="container">
+    <h3>Sign Up to Get Started</h3>
+<!-- new user form -->
+    <%= form_for @user, url: {action: 'create'} do |f| %>
+<!-- name -->
+        <div class="input-field">
+            <%= f.label :name %>
+            <%= f.text_field :name, :autofocus => 'autofocus', :value => '' %>
+            <br /><br />
+        </div>
+<!-- email -->
+        <div class="input-field">
+            <%= f.label :email %>
+            <%= f.text_field :email, :value => '' %>
+            <br /><br />
+        </div>
+<!-- password -->
+        <div class="input-field">
+            <%= f.label :password %>
+            <%= f.password_field :password, :value => '' %>
+            <br /><br />
+        </div>
+<!-- image -->
+        <div class="input-field">
+            <%= f.label :image %>
+            <%= f.text_field :image %>
+            <br /><br />
+        </div>
+<!-- description -->
+        <div class="input-field">
+            <%= f.label :description %>
+            <%= f.text_field :description %>
+            <br /><br />
+        </div>
+<!-- submit -->
+        <div class="input-field">
+            <%= f.submit "Sign Up", :class =>'signup'%>
+        </div>
+    <% end %>
+
+    <p><%= link_to 'cancel', "/" %></p>
+        <br>
+
+    <p class="center-align">
+        <%= link_to 'Already have an account? Log in', "/login" %></p>
+
+</div>

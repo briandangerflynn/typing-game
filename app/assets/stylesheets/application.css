@@ -1,0 +1,149 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: cardo;
+}
+
+#navbar {
+  background-color: black;
+  text-align: right;
+  padding-right: 10%;
+  height: 40px;
+  padding-top: 20px;
+}
+
+#navbar a {
+  color: white;
+  padding-left: 15px;
+  text-decoration: none;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#landing-page {
+  text-align: center;
+  background-color: lightsalmon;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+#main-title {
+  text-align: center;
+  font-family: montserrat;
+  font-size: 48px;
+  padding-top: 30px;
+  padding-bottom: 25px;
+  margin: 0;
+}
+
+#about-box {
+  width: 400px;
+  height: 200px;
+  border: 3px solid black;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: white;
+}
+
+#get-started {
+  text-align: center;
+}
+
+#win-alert {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  width: 50%;
+  height: 200px;
+  background-color: pink;
+  border: black 3px solid;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 24px;
+}
+
+#win-alert button {
+  width: 80px;
+  height: 40px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.code-challenge-area {
+  width: 49%;
+  float: left;
+  padding-top: 100px;
+}
+
+.code-render-area {
+  width: 49%;
+  float: right;
+  padding-top: 100px;
+}
+
+#profile-pic-div {
+  margin-top: 80px;
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+
+#profile-pic {
+  width: 300px;
+  margin: 0 auto;
+  border: 3px solid black;
+  border-radius: 50px;
+}
+
+#profile-personal {
+  margin-top: 80px;
+  width: 50%;
+  float: right;
+}
+
+#profile-personal h2 {
+  margin-top: 0;
+  display: inline;
+  float: left;
+}
+
+#profile-personal p {
+  clear: both;
+}
+
+#edit-profile {
+  display: inline-block;
+  margin-top: 6px;
+  margin-left: 20px;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+hr {
+  width: 50%;
+  margin-left: 0;
+}
