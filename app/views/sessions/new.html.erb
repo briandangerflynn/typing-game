@@ -1,11 +1,16 @@
-<div class="container">
-  <h3>Login</h3>
+<div id="landing-page">
+  <div class="container">
+    <div class="signup-box">
+      <h3 id="new-header">Login</h3>
 
-  <%= form_tag '/login' do %>
+      <%= form_tag '/login' do %>
 
-   Email: <%= text_field_tag :email %>
-   Password: <%= password_field_tag :password %>
-   <%= submit_tag "Submit" %>
+       Email: <%= text_field_tag :email %><br>
+       Password: <%= password_field_tag :password %><br><br>
+       <%= submit_tag "Submit" %>
 
-  <% end %>
+      <% end %>
+    </div>
+  </div>
 </div>
+

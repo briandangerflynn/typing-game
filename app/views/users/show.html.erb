@@ -6,25 +6,38 @@
   <div id="profile-personal">
     <h2><%= @user.name.capitalize %>'s Page</h2>
 
+
     <% if current_user == @user %>
       <a href="<%= @user.id %>/edit" id="edit-profile"><span>~Edit Profile~</span></a>
     <% end %>
-
+    <p>Level: <%= @user.level %></p>
     <p><%= @user.description %></p>
 
-    <hr>
+    <hr class="half-hr">
     <h3>Course Progress:</h3>
     <p><a href="/level_one">Level One</a></p>
     <ul>
       <li>Speed: </li>
       <li>Errors: </li>
-      <li><a href="#">See Level One Code</a></li>
+      <li><a href="/learn_one">See Level One Code</a></li>
     </ul>
     <p><a href="/level_two">Level Two</a></p>
     <ul>
       <li>Speed: </li>
       <li>Errors: </li>
-      <li><a href="#">See Level Two Code</a></li>
+      <li><a href="/learn_two">See Level Two Code</a></li>
+    </ul>
+    <p><a href="/level_three">Level Three</a></p>
+    <ul>
+      <li>Speed: </li>
+      <li>Errors: </li>
+      <li><a href="/learn_three">See Level Three Code</a></li>
+    </ul>
+    <p><a href="/level_four">Level Four</a></p>
+    <ul>
+      <li>Speed: </li>
+      <li>Errors: </li>
+      <li><a href="/learn_four">See Level Four Code</a></li>
     </ul>
 
   </div>

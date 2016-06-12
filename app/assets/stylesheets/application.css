@@ -16,7 +16,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: cardo;
+  font-family: "cardo";
 }
 
 #navbar {
@@ -33,78 +33,88 @@ body {
   text-decoration: none;
 }
 
+
+/* INCLUDED ON SHOW PAGE */
 .container {
   width: 80%;
   margin: 0 auto;
+  position: relative;
 }
+/*  */
 
 #landing-page {
-  text-align: center;
-  background-color: lightsalmon;
+  background-image: url('background1.jpg');
+  background-size: 100vw;
   height: 100vh;
   padding: 0;
   margin: 0;
 }
 
-#main-title {
-  text-align: center;
-  font-family: montserrat;
-  font-size: 48px;
-  padding-top: 30px;
-  padding-bottom: 25px;
-  margin: 0;
-}
-
-#about-box {
-  width: 400px;
-  height: 200px;
-  border: 3px solid black;
-  border-radius: 5px;
+#landing-content {
+  font-family: "courier";
+  padding-top: 120px;
+  width: 60%;
   margin: 0 auto;
-  padding: 10px;
-  background-color: white;
-}
-
-#get-started {
   text-align: center;
 }
 
-#win-alert {
-  display: none;
-  position: absolute;
-  left: 50%;
-  top: 30%;
-  width: 50%;
-  height: 200px;
-  background-color: pink;
-  border: black 3px solid;
-  border-radius: 10px;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  padding: 10px;
+#main-title {
+  font-weight: 500;
+  font-size: 96px;
+  margin: 0;
+  color: black;
+}
+
+#subtitle {
+  color: black;
   font-size: 24px;
 }
 
-#win-alert button {
-  width: 80px;
-  height: 40px;
-  border: 2px solid black;
-  border-radius: 10px;
+.get-started {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  background-color: red;
+  border-radius: 20px;
+  border: solid black 2px;
 }
 
 .code-challenge-area {
   width: 60%;
+  padding-top: 70px;
+  perspective: 1000px;
   float: left;
-  padding-top: 100px;
 }
 
 .code-render-area {
   width: 40%;
   float: right;
-  padding-top: 100px;
+  padding-top: 70px;
+  perspective: 1000px;
 }
 
+.code-challenge-area h2 {
+  margin-top: 0;
+}
+
+.signup-box {
+  position: relative;
+  top: 100px;
+  padding: 20px;
+  width: 500px;
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+#new-header {
+  margin-top: 0;
+}
+
+
+/* profile stuff */
 #profile-pic-div {
   margin-top: 80px;
   width: 50%;
@@ -113,7 +123,7 @@ body {
 }
 
 #profile-pic {
-  width: 300px;
+  width: 400px;
   margin: 0 auto;
   border: 3px solid black;
   border-radius: 50px;
@@ -121,7 +131,7 @@ body {
 
 #profile-personal {
   margin-top: 80px;
-  width: 50%;
+  width: 42%;
   float: right;
 }
 
@@ -137,13 +147,131 @@ body {
 
 #edit-profile {
   display: inline-block;
-  margin-top: 6px;
+  margin-top: 8px;
   margin-left: 20px;
   font-size: 12px;
   text-decoration: none;
 }
 
-hr {
+.half-hr {
   width: 50%;
   margin-left: 0;
+}
+
+/* end profile stuff */
+
+
+/* code for flipping over div */
+
+/* flip speed goes here */
+.flipper {
+  transition: 1s;
+  transition-delay: 0.4s;
+  transform-style: preserve-3d;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+}
+/* end flip */
+
+
+
+
+/* learn code area */
+.learn_intro {
+  padding-top: 50px;
+}
+
+.continue {
+  padding-top: 40px;
+  text-decoration: none;
+  float: right;
+}
+
+.redo {
+  padding-top: 40px;
+  text-decoration: none;
+  float: left;
+}
+
+.click-to-learn {
+  color: red;
+}
+
+.learn_code_box {
+  padding-top: 15px;
+  font-family: monospace;
+  width: 40%;
+  float: left;
+}
+
+.about_code_box {
+  width: 50%;
+  float: right;
+}
+
+.code:hover {
+  cursor: pointer;
+  color: red;
+}
+
+.indent-one {
+  padding-left: 30px;
+}
+
+.indent-two {
+  padding-left: 60px;
+}
+
+/* About Page Stuff */
+.create-account {
+  width: 350px;
+  height: 220px;
+  padding: 20px 50px;
+  float: left;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.about-content {
+  margin: 0 auto;
+  width: 650px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+}
+
+.about-content h2 {
+  font-size: 36px;
+  text-align: center;
+  font-family: "courier";
+}
+
+.guest-account {
+  width: 350px;
+  height: 220px;
+  padding: 20px 50px;
+  float: right;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.recommended {
+  font-size: 12px;
 }

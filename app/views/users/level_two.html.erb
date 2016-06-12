@@ -1,22 +1,35 @@
-<div id="win-alert">
-  <p id="win-alert-text"></p>
-  <a href="/users/1"><button>Yaaaaaay!</button></a>
-</div>
-
 <div class="container">
-  <div class="code-challenge-area">
-    <p>Type the following code:</p>
-    <div id="lines">
-      <code id="main-line"></code><br>
-      <code id="second-line"></code><br>
-      <code id="third-line"></code><br>
+  <div class="code-challenge-area" ontouchstart="this.classList.toggle('hover');">
+    <div class="flipper">
+      <div class="front">
+        <h2 id="level-header">Level 2</h2>
+        <p>Type the following code:</p>
+        <div id="lines">
+          <code id="main-line"></code><br>
+          <code id="second-line"></code><br>
+          <code id="third-line"></code><br>
+        </div>
+          <br><br>
+        <form>
+          <input id="challenge-box" rows="5" cols="80" style="height:100px;width:400px;" placeholder="Click Here to Begin">
+          </input>
+        </form>
+        <br>
+        Timer: <label id="minutes">00</label>:<label id="seconds">00</label>
+        <br>
+        Errors: <label id="errors"></label>
+      </div>
+
+
+      <div class="back">
+        <h2>Congrats!</h2>
+        <h4>You cleared Level 2!</h4>
+        <a href="/level_three">Level 3</a>
+      </div>
+
     </div>
-      <br><br>
-    <form>
-      <input id="challenge-box" rows="5" cols="80" style="height:100px;width:400px;" autofocus="autofocus">
-      </input>
-    </form>
   </div>
+
   <div class="code-render-area">
     <code class="rendered-code"></code>
   </div>

@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>CodeTypingApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -11,7 +11,7 @@
     <div id="navbar">
       <a id="nav-home" href='/'>Home</a>
       <% if current_user %>
-       <a href="/users/<%= current_user.id %>">Signed in as <%= current_user.email %></a>
+       <a href="/users/<%= current_user.id %>">Signed in as <%= current_user.name.capitalize %></a>
        <%= link_to "Logout", '/logout', :class=>"navlink" %>
       <% else %>
         <%= link_to 'Login', '/login' , :class=>"navlink" %>

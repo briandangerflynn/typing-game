@@ -1,14 +1,11 @@
 <div id="landing-page">
-
-  <h1 id="main-title">Typing Game</h1>
-  <div id="about-box">
-    <p id="about-text">Race to see how fast you can type code. When your done, your code will render and create a customized profile page.</p>
+  <div id="landing-content">
+    <h1 id="main-title">Key Coder</h1>
+    <p id="subtitle">Type fast. Learn code.</p>
+    <% if current_user %>
+      <a href="/users/<%=current_user.id%>" class="get-started">Get Started!</a>
+    <% else %>
+      <a href="/about" class="get-started">Get Started!</a>
+    <% end %>
   </div>
-  <br>
-  <% if current_user %>
-    <a href="/users/<%=current_user.id%>"><button id="get-started" type="">Get Started!</button></a>
-  <% else %>
-    <a href="/users/new"><button id="get-started" type="">Get Started!</button></a>
-  <% end %>
-
 </div>
