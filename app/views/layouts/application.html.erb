@@ -10,8 +10,19 @@
   <nav>
     <div id="navbar">
       <a id="nav-home" href='/'>Home</a>
-      <% if current_user %>
-       <a href="/users/<%= current_user.id %>">Signed in as <%= current_user.name.capitalize %></a>
+      <% if current_user && current_user.level > 4 %>
+       <a href="/users/<%= current_user.id %>"><%= current_user.name.capitalize %>'s Profile</a>
+       <%= link_to "Logout", '/logout', :class=>"navlink" %>
+      <% elsif current_user %>
+        <% if current_user.level == 1 %>
+          <a href="/level_one">Level One</a>
+        <% elsif current_user.level == 2 %>
+          <a href="/level_two">Level Two</a>
+        <% elsif current_user.level == 3 %>
+          <a href="/level_three">Level Three</a>
+        <% elsif current_user.level == 4 %>
+          <a href="/level_four">Level Four</a>
+        <% end %>
        <%= link_to "Logout", '/logout', :class=>"navlink" %>
       <% else %>
         <%= link_to 'Login', '/login' , :class=>"navlink" %>

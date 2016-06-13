@@ -11,7 +11,7 @@
         </div>
           <br><br>
         <form>
-          <input id="challenge-box" rows="5" cols="80" style="height:100px;width:400px;" placeholder="Click Here to Begin">
+          <input id="challenge-box" rows="5" cols="80" style="height:100px;width:400px;" placeholder="Click Here to Begin" autofocus="autofocus">
           </input>
         </form>
         <br>
@@ -23,8 +23,15 @@
 
       <div class="back">
         <h2>Congrats!</h2>
-        <h4>You cleared Level 2!</h4>
-        <a href="/level_three">Level 3</a>
+        <p>You cleared Level 2</p>
+        <p><span class="final-time">Time: </span><br>
+        <span class="final-errors">Errors: </span>
+        <hr class="half-hr">
+        <p>Options:</p>
+        <ol>
+            <li><a href="/learn_two">LEARN</a><br>What's all this gibberish I just typed?</li><br>
+            <li><a href="/level_three">PLAY</a><br>Who Cares? Continue to Level Three!</li>
+        </ol>
       </div>
 
     </div>

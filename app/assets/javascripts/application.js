@@ -34,26 +34,29 @@ if(level !== undefined){
 
   //  level lines in block strings
 
-  var level_one_lines = "<!DOCTYPE html>|<html>|<head>|<title>Code Typer</title>|</head>|<body>"
+  var level_one_lines = "<!DOCTYPE html>|<html>|<head>|<title>Key Coder</title>|</head>|<body>"
 
   var level_two_lines = "<div class='container'>|<h2><%= @user.name %>'s Page</h2>|<a href='<%= @user.id %>/edit' id='edit-profile'>|<span>~Edit Profile~</span></a>|<img src='<%= @user.image %>' id='profile-pic'>|<p><%= @user.description %></p>|<hr></body></html>"
 
   var level_three_lines = "<h3>Course Progress:</h3>|<p><a href='/level_one'>Level One</a></p>|<ul><li>Speed: </li>|<li>Errors: </li>|<li><a href='#'>See Level One Code</a></li></ul>|<p><a href='/level_two'>Level Two</a></p>|<ul><li>Speed: </li>|<li>Errors: </li>|<li><a href='#'>See Level Two Code</a></li></ul>|<p><a href='/level_three'>Level three</a></p>|<ul><li>Speed: </li>|<li>Errors: </li>|<li><a href='#'>See Level three Code</a></li></ul>|</div></div>"
 
-  var level_four_lines = ".container {|width: 80%;|margin: 0 auto;|position: relative;}|#profile-pic-div {|margin-top: 80px;|width: 50%;|float: left;|text-align: center;}|#profile-pic {|width: 400px;|margin: 0 auto;|border: 3px solid black;|border-radius: 50px;}|#profile-personal {|margin-top: 80px;|width: 42%;|float: right;}|#profile-personal h2 {|margin-top: 0;|display: inline;|float: left;}|#profile-personal p {|clear: both;}|#edit-profile {|display: inline-block;|margin-top: 8px;|margin-left: 20px;|font-size: 12px;|text-decoration: none;}|.half-hr {|width: 50%;|margin-left: 0;}"
+  var level_four_lines = ".container {|width: 80%;|margin: 0 auto;|position: relative;}|#profile-pic-div {|margin-top: 80px;|width: 50%;|float: left;|text-align: center;}|#profile-pic {|width: 400px;|margin: 0 auto;|border: 3px solid black;|border-radius: 50px;}"
+
+  var level_five_lines = "#profile-personal {|margin-top: 80px;|width: 42%;|float: right;}|#profile-personal h2 {|margin-top: 0;|display: inline;|float: left;}|#profile-personal p {|clear: both;}|#edit-profile {|display: inline-block;|margin-top: 8px;|margin-left: 20px;|font-size: 12px;|text-decoration: none;}|.half-hr {|width: 50%;|margin-left: 0;}"
 
   // splits level lines into arrays
   var type_row_one = level_one_lines.split("|")
   var type_row_two = level_two_lines.split("|")
   var type_row_three = level_three_lines.split("|")
   var type_row_four = level_four_lines.split("|")
+  var type_row_five = level_five_lines.split("|")
 
-  var type_row_array = [type_row_one, type_row_two, type_row_three, type_row_four]
+  var type_row_array = [type_row_one, type_row_two, type_row_three, type_row_four, type_row_five]
 
   var type_row = type_row_array[level]
 
   // level 1 line views
-  var level_one_line_views ="&lt;!DOCTYPE html&gt;|&lt;html&gt;|&lt;head&gt;|&lt;title&gt;Code Typer&lt;/title&gt;|&lt;/head&gt;|&lt;body&gt;"
+  var level_one_line_views ="&lt;!DOCTYPE html&gt;|&lt;html&gt;|&lt;head&gt;|&lt;title&gt;Key Coder&lt;/title&gt;|&lt;/head&gt;|&lt;body&gt;"
 
   var level_two_line_views = "&lt;div class='container'&gt;|&lt;h2&gt;&lt;&#37;&#61; &#64;user.name &#37;&gt;'s Page&lt;/h2&gt;|&lt;a href='&lt;&#37;&#61; &#64;user.id &#37;&gt;/edit' id='edit-profile'&gt;|&lt;span&gt;~Edit Profile~&lt;/span&gt;&lt;/a&gt;|&lt;img src='&lt;&#37;&#61; &#64;user.image &#37;&gt;' id&#61;'profile-pic'&gt;|&lt;p&gt;&lt;&#37;&#61; &#64;user.description &#37;&gt;&lt;/p&gt;|&lt;hr&gt;"
 
@@ -64,7 +67,7 @@ if(level !== undefined){
   var view_row_two = level_two_line_views.split("|")
   var view_row_three = level_three_line_views.split("|")
 
-  var view_row_array = [view_row_one, view_row_two, view_row_three, type_row_four]
+  var view_row_array = [view_row_one, view_row_two, view_row_three, type_row_four, type_row_five]
 
   var view_row = view_row_array[level]
 
@@ -87,7 +90,7 @@ if(level !== undefined){
     "}":221,
 
     "C":67,"D":68,"E":69,"O":79,"T":84,"Y":89,"P":80,
-    "L":76,"S":83,
+    "L":76,"S":83,"K":75,
 
     "0":48,"1":49,"2":50,"3":51,"4":52,"5":53,"6":54,
     "7":55,"8":56,"9":57,
@@ -122,6 +125,7 @@ if(level !== undefined){
 
 var minutesLabel = document.getElementById("minutes");
 var secondsLabel = document.getElementById("seconds");
+
 
     // starts challenge and starts timer
   $("#challenge-box").on('click', function(event) {
@@ -206,6 +210,8 @@ var secondsLabel = document.getElementById("seconds");
     }
   })
 }
+
+$('.blink').css('text-shadow', '0 0 1px #FF0000');
 
 var about_code_box_title = $(".about_code_box_title")
 var about_code_box_paragraph = $(".about_code_box_paragraph")

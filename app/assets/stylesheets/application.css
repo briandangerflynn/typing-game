@@ -141,16 +141,16 @@ body {
   float: left;
 }
 
-#profile-personal p {
-  clear: both;
-}
-
 #edit-profile {
   display: inline-block;
   margin-top: 8px;
   margin-left: 20px;
   font-size: 12px;
   text-decoration: none;
+}
+
+#profile-personal p {
+  clear: both;
 }
 
 .half-hr {
@@ -238,21 +238,12 @@ body {
 }
 
 /* About Page Stuff */
-.create-account {
-  width: 350px;
-  height: 220px;
-  padding: 20px 50px;
-  float: left;
-  border: 1px solid black;
-  border-radius: 10px;
-  background-color: white;
-}
 
 .about-content {
   margin: 0 auto;
   width: 650px;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 
 }
 
@@ -262,14 +253,23 @@ body {
   font-family: "courier";
 }
 
-.guest-account {
-  width: 350px;
-  height: 220px;
+.account-options {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.create-account, .guest-account {
+  width: 200px;
+  height: 280px;
   padding: 20px 50px;
-  float: right;
-  border: 1px solid black;
+  float: left;
+  border: 2px solid black;
   border-radius: 10px;
   background-color: white;
+}
+
+.guest-account {
+  margin-left: 80px;
 }
 
 .recommended {

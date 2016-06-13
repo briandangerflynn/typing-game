@@ -7,16 +7,15 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.level == nil
       @user.update_attribute :level, 1
+    elsif @user.level == 1
+      redirect_to '/level_one'
+    elsif @user.level == 2
+      redirect_to '/level_two'
+    elsif @user.level == 3
+      redirect_to '/level_three'
+    elsif @user.level == 4
+      redirect_to '/level_four'
     end
-    # if @user.level == 1
-    #   redirect_to '/level_one'
-    # end
-    # if @user.level == 2
-    #   redirect_to '/level_two'
-    # end
-    # if @user.level == 3
-    #   redirect_to '/level_three'
-    # end
   end
 
   def new
@@ -54,23 +53,38 @@ class UsersController < ApplicationController
   end
 
   def level_two
-    @user = current_user
-    if @user.level < 2
-      @user.update_attribute :level, 2
+    if current_user
+      @user = current_user
+      if @user.level < 2
+        @user.update_attribute :level, 2
+      end
     end
   end
 
   def level_three
-    @user = current_user
-    if @user.level < 3
-      @user.update_attribute :level, 3
+    if current_user
+      @user = current_user
+      if @user.level < 3
+        @user.update_attribute :level, 3
+      end
     end
   end
 
   def level_four
-    @user = current_user
-    if @user.level < 4
-      @user.update_attribute :level, 4
+    if current_user
+      @user = current_user
+      if @user.level < 4
+        @user.update_attribute :level, 4
+      end
+    end
+  end
+
+  def level_five
+    if current_user
+      @user = current_user
+      if @user.level < 5
+        @user.update_attribute :level, 5
+      end
     end
   end
 
@@ -84,6 +98,9 @@ class UsersController < ApplicationController
   end
 
   def learn_four
+  end
+
+  def learn_five
   end
 
   def about
