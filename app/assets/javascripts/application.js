@@ -58,7 +58,7 @@ if(level !== undefined){
   // level 1 line views
   var level_one_line_views ="&lt;!DOCTYPE html&gt;|&lt;html&gt;|&lt;head&gt;|&lt;title&gt;Key Coder&lt;/title&gt;|&lt;/head&gt;|&lt;body&gt;"
 
-  var level_two_line_views = "&lt;div class='container'&gt;|&lt;h2&gt;&lt;&#37;&#61; &#64;user.name &#37;&gt;'s Page&lt;/h2&gt;|&lt;a href='&lt;&#37;&#61; &#64;user.id &#37;&gt;/edit' id='edit-profile'&gt;|&lt;span&gt;~Edit Profile~&lt;/span&gt;&lt;/a&gt;|&lt;img src='&lt;&#37;&#61; &#64;user.image &#37;&gt;' id&#61;'profile-pic'&gt;|&lt;p&gt;&lt;&#37;&#61; &#64;user.description &#37;&gt;&lt;/p&gt;|&lt;hr&gt;"
+  var level_two_line_views = "&lt;div class='container'&gt;|&lt;h2&gt;&lt;&#37;&#61; &#64;user.name &#37;&gt;'s Page&lt;/h2&gt;|&lt;a href='&lt;&#37;&#61; &#64;user.id &#37;&gt;/edit' id='edit-profile'&gt;|&lt;span&gt;~Edit Profile~&lt;/span&gt;&lt;/a&gt;|&lt;img src='&lt;&#37;&#61; &#64;user.image &#37;&gt;' id&#61;'profile-pic'&gt;|&lt;p&gt;&lt;&#37;&#61; &#64;user.description &#37;&gt;&lt;/p&gt;|&lt;hr&gt;&lt;/body&gt;&lt;/html&gt;"
 
   var level_three_line_views = "&lt;h3&gt;Course Progress:&lt;/h3&gt;|&lt;p&gt;&lt;a href='/level_one'&gt;Level One&lt;/a&gt;&lt;/p&gt;|&lt;ul&gt;&lt;li&gt;Speed: &lt;/li&gt;|&lt;li&gt;Errors: &lt;/li&gt;|&lt;li&gt;&lt;a href='#'&gt;See Level One Code&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;"
 
