@@ -242,15 +242,16 @@ body {
 .about-content {
   margin: 0 auto;
   width: 650px;
-  padding-top: 50px;
+  padding-top: 40px;
   padding-bottom: 30px;
-
+  text-align: center;
 }
 
 .about-content h2 {
-  font-size: 36px;
+  font-size: 60px;
   text-align: center;
   font-family: "courier";
+  margin-bottom: 0px;
 }
 
 .account-options {
